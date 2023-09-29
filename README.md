@@ -21,3 +21,9 @@ o objetivo do bucket é receber o codigo transpilado ou compilado do react.js  p
   post build ultima fase , o comando que vai ser executado será um comando do aws cli que ja vem integrado no aws codebuild , 'aws s3 cp build'  copiar tudo que está na pasta do build para o bucket s3 ' nome do bucket  ' de forma recursiva '--recursive '  e de permissão ao publico '--acl public read'
   obs: aqui ja deve ter o git configurado no codecommit para receber as atualizações do projeto ' repositorio / sample-repo '
   tutorial vincular git no repositorio ' https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-gc.html?icmpid=docs_acc_console_connect_np '.
+  tutorial git em 2 repositorios , no caso estou usando repositorio git e repositorio codecommit
+  https://pt.stackoverflow.com/questions/362260/como-manter-um-projeto-em-2-repositórios
+  ao fazer o gitclone no repositorio codecommit o vscode pediu as credencias de git codecommit que devem ser  geradas no IAM 
+  - exemplo git em 2 repositorios 
+   git remote add all https://git-codecommit.us-east-1.amazonaws.com/v1/repos/sample-repo
+   git remote set-url --add --push all https://git-codecommit.us-east-1.amazonaws.com/v1/repos/sample-repo
