@@ -23,6 +23,12 @@ criar nome para o bucket , deixar com acesso publico.
   - tutorial git em 2 repositorios , no caso estou usando repositório git e repositorio codecommit
     https://pt.stackoverflow.com/questions/362260/como-manter-um-projeto-em-2-repositórios
 
+- AWS PIPELINE
+ - próximo passo criar a pipeline para transpilar o codebuild
+ - em pipeline  , Create Pipeline , configuraçoes padroes , em source , colocar AWS CODECOMMIT , nome do repositorio selecionar o sample-repo e a ramificação main . chance detection = aws codepipeline , artefato de saida = padrão , build provider = codebuild , create project , criar nome , environment - managed image - operating system - amazon linux 2 , runtime  = standard , image = standard 3.0 .  concluir tudo nas opções padroes , continue to codepipeline, compilação única ,  next , skip deploy stage , ja foi criado no buildspec.yml . create pipeline.
+ - adicionar IAM ROLE para permitir o codebuild possa acessar o s3. em funções ou roles , selecionar o codebuild service role que tem o nome que criamos no codebuild. exemplo : ' codebuild-ReactWebBuild-service-role ' no lado direito clicar em adicionar permissões e anexar politicas, attach policies  ' AmazonS3FullAccess ' 
+ - agora retornar para codepipeline e clicar na pipeline criada,' ReactAppPipeline '  clicar em Lançar Alteração / Release change .
+
   ### projeto online : https://fbs-dev-app.s3.amazonaws.com/
 
 
