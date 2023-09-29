@@ -20,4 +20,4 @@ o objetivo do bucket é receber o codigo transpilado ou compilado do react.js  p
   proxima etapa é o build da solução , comando npm run script build , ele será responsavel por transpilar o conteudo do projeto para produção.
   post build ultima fase , o comando que vai ser executado será um comando do aws cli que ja vem integrado no aws codebuild , 'aws s3 cp build'  copiar tudo que está na pasta do build para o bucket s3 ' nome do bucket  ' de forma recursiva '--recursive '  e de permissão ao publico '--acl public read'
   obs: aqui ja deve ter o git configurado no codecommit para receber as atualizações do projeto ' repositorio / sample-repo '
-  tutorial vincular git no repositorio ' https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-gc.html?icmpid=docs_acc_console_connect_np ' 
+  tutorial vincular git no repositorio ' https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-gc.html?icmpid=docs_acc_console_connect_np '.
