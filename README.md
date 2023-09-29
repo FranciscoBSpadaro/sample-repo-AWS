@@ -8,9 +8,9 @@
  ### npx create-react-app sample-repo
 
 - AWS S3
-- proximo passo é criar um bucket s3 na aws onde vai será feito o upload desse projeto e suas atualizações
+ - proximo passo é criar um bucket s3 na aws onde vai será feito o upload desse projeto e suas atualizações
 criar nome para o bucket , deixar com acesso publico.
-- o objetivo do bucket é receber o codigo transpilado ou compilado do react.js  pelo aws code commit
+ - o objetivo do bucket é receber o codigo transpilado ou compilado do react.js  pelo aws code commit
 
 - AWS CODE COMMIT
   - criar um arquivo yml no projeto e fazer o upload dele para  o repositório code commit o arquivo será responsavel pelo build  no aws code build e copiar os dados para o S3.
