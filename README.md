@@ -24,6 +24,19 @@ o objetivo do bucket é receber o codigo transpilado ou compilado do react.js  p
   tutorial git em 2 repositorios , no caso estou usando repositorio git e repositorio codecommit
   https://pt.stackoverflow.com/questions/362260/como-manter-um-projeto-em-2-repositórios
   ao fazer o gitclone no repositorio codecommit o vscode pediu as credencias de git codecommit que devem ser  geradas no IAM 
-  - exemplo git em 2 repositorios 
-   git remote add all https://git-codecommit.us-east-1.amazonaws.com/v1/repos/sample-repo
-   git remote set-url --add --push all https://git-codecommit.us-east-1.amazonaws.com/v1/repos/sample-repo
+  - exemplo git em 2 repositorios
+  no terminal do vscode 
+    " git remote -v " visualiza os repositorios
+  " git remote add all https://git-codecommit.us-east-1.amazonaws.com/v1/repos/sample-repo  "    cria um remote chamado "all", apontando para a URL aws
+  " git remote -v - veja que agora adicionou uma nova origem de repositorio
+  " git remote set-url --add --push all https://git-codecommit.us-east-1.amazonaws.com/v1/repos/sample-repo "    o novo repositorio agora aceita comando push
+  " git push all "  envia todo o projeto
+  porem ao digitar git remote -v  o destino ' all ' ainda vai apenas para aws , ao fazer commits quero que envie ao mesmo tempo para github
+  para isso :
+refazendo tudo :
+git remote remove all
+git remote remove origin
+git remote add all https://git-codecommit.us-east-1.amazonaws.com/v1/repos/sample-repo
+git remote set-url --add --push all https://github.com/FranciscoBSpadaro/sample-repo-AWS.git
+
+  
