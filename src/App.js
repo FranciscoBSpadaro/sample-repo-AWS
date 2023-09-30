@@ -12,7 +12,7 @@ function App() {
         <a
           className="App-link"
           href="https://fbs-dev.netlify.app"
-          target="_blank"
+          target="_parent"
           rel="noopener noreferrer"
         >
           FBS-DEV
