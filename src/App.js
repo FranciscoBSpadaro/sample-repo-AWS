@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Pagina inicial do projeto Aws Code Pipeline .
+          Página inicial do Projeto CI/CD com React + AWS .
         </p>
         <a
           className="App-link"
@@ -16,6 +16,14 @@ function App() {
           rel="noopener noreferrer"
         >
           FBS-DEV
+        </a>
+        <a
+          className="App-link"
+          href="https://github.com/FranciscoBSpadaro/sample-repo-AWS"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Github Source Code
         </a>
       </header>
     </div>
