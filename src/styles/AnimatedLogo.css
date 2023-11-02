@@ -1,0 +1,20 @@
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Aplicando a animação ao logo */
+  .App-logo {
+    animation: spin infinite 20s linear;
+  }
+  
