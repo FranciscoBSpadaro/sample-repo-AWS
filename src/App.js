@@ -1,6 +1,6 @@
 // App.js
 import React from 'react';
-import './Components/styles/App.css';
+import './styles/App.css';
 import Card from './Components/Card';
 import AnimatedLogo from './Components/AnimatedLogo';
 
